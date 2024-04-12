@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Exo 2", sans-serif;
+}
+
+:root {
+    --cor-primaria: #111111;
+    --cor-secundaria: #000000;
+    --cor-terciaria: #ffffff;
+    --cor-quartenaria: #d80000e7;
+}
+
+body {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+}
+
+.cabecalho {
+    padding: 1.4rem 9%;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho_menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.cabecalho_menu_nome {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--cor-terciaria);
+    transition: 0.3s ease-in-out;
+}
+.cabecalho_menu_nome:hover {
+    transform: scale(1.1);
+}
+.nome_destaque {
+    color: var(--cor-quartenaria);
+    font-weight: 800;
+}
+
+.cabecalho_menu_paginas {
+    display: flex;
+    gap: 40px;
+}
+.cabecalho_menu_paginas_pagina {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+.cabecalho_menu_paginas_pagina:hover {
+    color: var(--cor-quartenaria);
+    border-bottom: 3px solid var(--cor-quartenaria);
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--cor-quartenaria);
+    display: none;
+    opacity: 1.5;
+}
+
+@media (max-width: 700px) {
+    .cabecalho_menu_paginas {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #menu-icon:before {
+        content: "\2630";
+        font-size: 28px; /* Tamanho do ícone pode ser ajustado conforme necessário */
+        opacity: 0.8;
+        transition: opacity 0.2s, box-shadow 0.2s;
+    }
+
+    #menu-icon:hover:before {
+        opacity: 1.5; /* Alterando a opacidade do ícone ao passar o mouse */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adicionando uma sombra ao ícone */
+    }
+}

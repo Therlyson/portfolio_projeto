@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="cabecalho">
         <section class="cabecalho_menu">
             <h2 class="cabecalho_menu_nome">Therlyson <strong class="nome_destaque">Ryan</strong> </h2>
-            
-            <i class='icon_menu' id="menu-icon"></i>
+            <button id="btn-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
             <nav class="cabecalho_menu_paginas">
                 <a class="cabecalho_menu_paginas_pagina" href="index.html">Home</a>
                 <a class="cabecalho_menu_paginas_pagina" href="about.html">About</a>
@@ -21,9 +24,27 @@
         </section>
     </header>
 
-    <main>
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="imagens/minhaFoto.jpeg" alt="Imagem Ryan">
+        </div>
+        <section class="home-conteudo">
+            <h1 class="home-conteudo-nome">Hello, I'm <strong class="home-nome-destaque">Therlyson</strong></h1>
+            <h3 class="home-conteudo-animation">I'm a <span></span></h3>
+            <p class="home-conteudo-texto">Bem-vindo ao meu portfólio, 
+                onde cada página conta uma história única de inovação e dedicação. 
+                Explore minha jornada criativa e descubra 
+                uma coleção de projetos que refletem minha paixão e habilidades.</p>
 
-    </main>
+            <div class="home-conteudo-social">
+                <a href="https://www.instagram.com/theeryan/"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.linkedin.com/in/therlyson-ryan-732b45280/"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://github.com/Therlyson"><i class='bx bxl-github' ></i></a>
+            </div>
+
+            <a href="mailto:therlyson2017@gmail.com">Contrate-me</a>
+        </section>
+    </section>
 
 
     <footer></footer>

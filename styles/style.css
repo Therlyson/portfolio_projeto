@@ -46,7 +46,7 @@ body {
     transition: 0.3s ease-in-out;
 }
 .cabecalho_menu_nome:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .nome_destaque {
     color: var(--cor-quartenaria);
@@ -69,33 +69,37 @@ body {
     color: var(--cor-quartenaria);
     border-bottom: 3px solid var(--cor-quartenaria);
 }
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--cor-quartenaria);
+#btn-menu{
     display: none;
-    opacity: 1.5;
 }
+
 
 @media (max-width: 700px) {
     .cabecalho_menu_paginas {
         display: none;
     }
 
-    #menu-icon {
-        display: block;
-        text-align: center;
+    #btn-menu{
+        all: unset;
         cursor: pointer;
+        transition: .5s ease-out;
+        color: var(--cor-terciaria);
+        display: block;
     }
 
-    #menu-icon:before {
-        content: "\2630";
-        font-size: 28px; /* Tamanho do ícone pode ser ajustado conforme necessário */
-        opacity: 0.8;
-        transition: opacity 0.2s, box-shadow 0.2s;
+    #btn-menu:hover{
+        transform: rotate(180deg);
+        color: var(--cor-quartenaria);
     }
+}
 
-    #menu-icon:hover:before {
-        opacity: 1.5; /* Alterando a opacidade do ícone ao passar o mouse */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adicionando uma sombra ao ícone */
-    }
+
+.home{
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
 }

@@ -18,6 +18,8 @@
     --cor-secundaria: #000000;
     --cor-terciaria: #ffffff;
     --cor-quartenaria: #d80000e7;
+
+    --font-secundaria: "Eczar", serif;
 }
 
 body {
@@ -96,9 +98,8 @@ body {
 
 
 .home{
-    min-height: 100vh;
-    padding: 10rem 9% 10rem;
-    /* padding: 0px; */
+    min-height: 80vh;
+    padding: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,15 +108,24 @@ body {
 }
 
 .home-img{
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.imagem-destaque{
-    border-radius: 160px;
-    width: 20%;
-    height: 20%;
+.home-img-destaque{
+    border-radius: 50%;
+    position: relative;
+    top: 3rem;
+    width: 19rem;
+    height: 20rem;
+    box-shadow: 0 0 30px var(--cor-quartenaria);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.home-img-destaque:hover{
+    box-shadow: 0 0 40px var(--cor-quartenaria),
+                0 0 80px var(--cor-quartenaria);
 }
 
 .home-conteudo{
@@ -128,18 +138,69 @@ body {
 }
 
 .home-conteudo-nome{
-    font-family: "Eczar", serif;
-    font-weight: 500;
-    font-size: 2.8rem;
+    font-family: var(--font-secundaria);
+    font-weight: 600;
+    font-size: 2.7rem;
     color: var(--cor-terciaria);
+    margin-top: 1rem;
+    line-height: 1;
 }
 .home-nome-destaque{
+    font-family: var(--font-secundaria);
     color: var(--cor-quartenaria);
 }
 
 .home-conteudo-animation{
-    font-size: 2.2rem;
+    font-family: var(--font-secundaria);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--cor-terciaria);
+    margin-bottom: 1rem;
 }
 span{
     color: var(--cor-quartenaria);
+}
+
+.home-conteudo-texto{
+    font-family: var(--font-secundaria);
+    color: var(--cor-terciaria);
+    font-size: 1.05rem;
+    max-width: 1000px;
+}
+
+.home-conteudo-social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: transparent;
+    border: 0.2rem solid var(--cor-quartenaria);
+    font-size: 2rem;
+    border-radius: 50%;
+    color: var(--cor-quartenaria);
+    margin: 2rem 1rem 2rem 1.2rem;
+    transition: 0.3s ease-in-out;
+}
+.home-conteudo-social a:hover{
+    transform: scale(1.2)translateY(-8px);
+    background: var(--cor-quartenaria);
+    color: var(--cor-terciaria);
+    box-shadow: 0 0 50px var(--cor-quartenaria);
+}
+
+.home-conteudo-contrato{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--cor-quartenaria);
+    border-radius: 4rem;
+    font-family: var(--font-secundaria);
+    font-weight: 500;
+    color: var(--cor-terciaria);
+    transition: 0.3s ease-in-out;
+    letter-spacing: 0.1rem;
+}
+.home-conteudo-contrato:hover{
+    transform: scale(1)translateY(-3px);
+    box-shadow: 0 0 25px var(--cor-quartenaria);
 }

@@ -1,0 +1,4 @@
+1 - Adicionar ao home minhas qualificações com typeScript
+2 - Adicionar ao home para celular o menu responsivo
+
+3 - deixar o cabeçalho sempre em cima das paginas

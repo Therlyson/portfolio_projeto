@@ -117,12 +117,26 @@ body {
     border-radius: 50%;
     position: relative;
     top: 3rem;
-    width: 19rem;
-    height: 20rem;
+    width: 17rem;
+    height: 18rem;
     box-shadow: 0 0 30px var(--cor-quartenaria);
     cursor: pointer;
     transition: 0.5s ease-in-out;
+
+    animation: floatImage 4s ease-in-out infinite;
 }
+@keyframes floatImage{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .home-img-destaque:hover{
     box-shadow: 0 0 40px var(--cor-quartenaria),
                 0 0 80px var(--cor-quartenaria);
@@ -140,7 +154,7 @@ body {
 .home-conteudo-nome{
     font-family: var(--font-secundaria);
     font-weight: 600;
-    font-size: 2.7rem;
+    font-size: 2.6rem;
     color: var(--cor-terciaria);
     margin-top: 1rem;
     line-height: 1;
@@ -172,14 +186,14 @@ span{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
     background: transparent;
     border: 0.2rem solid var(--cor-quartenaria);
-    font-size: 2rem;
+    font-size: 1.7rem;
     border-radius: 50%;
     color: var(--cor-quartenaria);
-    margin: 2rem 1rem 2rem 1.2rem;
+    margin: 1.5rem 0.5rem 1.7rem 1.2rem;
     transition: 0.3s ease-in-out;
 }
 .home-conteudo-social a:hover{
@@ -191,7 +205,8 @@ span{
 
 .home-conteudo-contrato{
     display: inline-block;
-    padding: 1rem 2rem;
+    justify-content: center;
+    padding: 0.5rem 1.5rem;
     background: var(--cor-quartenaria);
     border-radius: 4rem;
     font-family: var(--font-secundaria);
@@ -199,6 +214,7 @@ span{
     color: var(--cor-terciaria);
     transition: 0.3s ease-in-out;
     letter-spacing: 0.1rem;
+    margin: 0rem 0rem 0rem 1.2rem;
 }
 .home-conteudo-contrato:hover{
     transform: scale(1)translateY(-3px);

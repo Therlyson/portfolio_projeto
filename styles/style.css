@@ -122,6 +122,7 @@ body {
     box-shadow: 0 0 30px var(--cor-quartenaria);
     cursor: pointer;
     transition: 0.5s ease-in-out;
+    object-fit: cover; /* Garante que a imagem mantenha sua proporção */
 
     animation: floatImage 4s ease-in-out infinite;
 }

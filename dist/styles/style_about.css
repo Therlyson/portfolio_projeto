@@ -11,12 +11,12 @@
 }
 
 .about{
-    padding: 3rem;
+    padding: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
-    gap: 10rem;
+    gap: 7rem;
 }
 
 .about-img{
@@ -47,12 +47,13 @@
     font-family: var(--font-secundaria);
     font-weight: 600;
     font-size: 2.9rem;
-    color: var(--cor-terciaria)
+    color: var(--cor-terciaria);
 }
 .nome-destaque{
     font-family: var(--font-secundaria);
-    color: var(--cor-quartenaria);
+    color: var(--cor-terciaria);
     border: 2px solid var(--cor-quartenaria);
+    color: var(--cor-quartenaria);
     padding: 3px;
     border-radius: 8px; /* Adiciona cantos arredondados */
     display: inline-block; /* Garante que a borda envolva apenas o texto */
@@ -77,46 +78,65 @@ span{
     line-height: 1.6;
 }
 
+.about-cv{
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
+
 .about-conteudo-cv{
     font-weight: 600;
     color: var(--cor-terciaria);
     text-align: center;
     border: 2px solid var(--cor-quartenaria);
-    padding: 7px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 25px;
     display: inline-block;
     
     transition: 0.3s ease-in-out;
     letter-spacing: 0.1rem;
-    margin: 1rem 12rem 0rem 12rem;
 }
 .about-conteudo-cv:hover{
     transform: scale(1)translateY(-3px);
     box-shadow: 0 0 25px var(--cor-quartenaria);
 }
 
-@media (max-width: 700px){
+@media(max-width: 1067px){
     .about{
-        flex-direction: column;
-        gap: 3rem;
+        padding: 3rem;
+        gap: 5rem;
     }
 
     .about-img-destaque{
-        width: 70%; 
-        height: auto;
-        max-width: 250px;
-        margin-bottom: 2rem;
+        height: 21rem;
+        max-width: 20rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 950px){
+    .about{
+        flex-direction: column;
+        padding: 3rem;
+        gap: 2rem;
+    }
+
+    .about-img-destaque{
+        height: 20rem;
+        max-width: 19rem;
+        margin-bottom: 1rem;
     }
 
     .about-conteudo{
-        text-align: center;
+        text-align: left;
     }
 
     .about-conteudo-cv{
-        margin: 1rem 0;
+        padding: 9px;
+        font-size: 0.9rem;
     }
 
     .about-conteudo-sobre{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }

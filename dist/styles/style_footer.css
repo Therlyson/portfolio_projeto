@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
+
+:root {
+    --cor-primaria: #111111;
+    --cor-secundaria: #000000;
+    --cor-terciaria: #ffffff;
+    --cor-quartenaria: #d80000e7;
+
+    --font-secundaria: "Eczar", serif;
+}
+
+footer{
+    padding: 1.5rem 7%;
+    box-shadow: 0 0 30px 5px #ffffff1d;
+}
+
+.footer-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-line-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo-nome{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--cor-terciaria);
+}
+.footer-logo-destaque{
+    color: var(--cor-quartenaria);
+    font-weight: 800;
+}
+
+.footer-line-social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: transparent;
+    border: 0.2rem solid var(--cor-quartenaria);
+    font-size: 1.5rem;
+    border-radius: 50%;
+    color: var(--cor-quartenaria);
+    margin: 1.5rem 0rem 1.7rem 0.8rem;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-line-social a:hover{
+    transform: scale(1)translateY(-2px);
+    background: var(--cor-quartenaria);
+    color: var(--cor-terciaria);
+    box-shadow: 0 0 30px var(--cor-quartenaria);
+}
+
+.footer-mail{
+    padding-top: 1.4rem;
+    border-top: 2px solid var(--cor-quartenaria);
+}
+
+.footer-mail p i{
+    color: var(--cor-quartenaria);
+    font-size: 1.4rem;
+}
+
+.footer-mail p a{
+    color: var(--cor-terciaria);
+}
+
+@media (max-width: 480px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-line {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-line-logo{
+        padding-bottom: 1.4rem;
+    }
+}

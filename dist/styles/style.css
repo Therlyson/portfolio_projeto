@@ -229,11 +229,11 @@ body {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 3rem;
+    width: 2.8rem;
+    height: 2.8rem;
     background: transparent;
     border: 0.2rem solid var(--cor-quartenaria);
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     border-radius: 50%;
     color: var(--cor-quartenaria);
     margin: 1.5rem 0.5rem 1.7rem 1.2rem;
@@ -263,3 +263,17 @@ body {
     transform: scale(1)translateY(-3px);
     box-shadow: 0 0 25px var(--cor-quartenaria);
 }
+
+/* @media (max-width: 350px){
+    .home-conteudo-social a{
+        width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: 0.2rem solid var(--cor-quartenaria);
+    font-size: 1.7rem;
+    border-radius: 50%;
+    color: var(--cor-quartenaria);
+    margin: 1.5rem 0.5rem 1.7rem 1.2rem;
+    transition: 0.3s ease-in-out;
+    }
+} */

@@ -103,9 +103,13 @@ class FormSubmit {
         this.sendForm = this.sendForm.bind(this);
     }
 
-    displaySuccess(): void{
+    displaySuccess(): void {
         if (this.form) {
             this.form.innerHTML = this.settings.success;
+            const contactTitle = document.querySelector('.contact-titulo') as HTMLElement;
+            if (contactTitle) {
+                contactTitle.style.display = 'none';
+            }
         }
     }
 
@@ -134,7 +138,7 @@ class FormSubmit {
     async sendForm(event: Event){
         try{
             this.onSubmission(event);
-            await fetch(this.url, {
+            await fetch(this.url!, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -147,10 +151,10 @@ class FormSubmit {
             this.displayError();
         }
     }
-
+    
     init(){
         if (this.form && this.formButton) {
-            this.formButton.addEventListener("click", () => this.sendForm);
+            this.formButton.addEventListener("click", (event) => this.sendForm(event));
         }
         return this;
     }
@@ -159,7 +163,7 @@ class FormSubmit {
 const formSubmit = new FormSubmit({
     form: "[data-form]",
     button: "[data-button]",
-    success: "<h1 class='success'>Mensagem enviada!</h1>",
+    success: "<div class='form-submit'><h1 class='success'>Mensagem enviada com sucesso!</h1><h3 class='success2'>Em breve entrarei em contato.</h3></div>",
     error: "<h1 class='error'>Não foi possivel enviar sua mensagem!</h1>"
 });
 formSubmit.init();

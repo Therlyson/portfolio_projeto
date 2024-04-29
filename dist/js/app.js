@@ -85,6 +85,10 @@ class FormSubmit {
     displaySuccess() {
         if (this.form) {
             this.form.innerHTML = this.settings.success;
+            const contactTitle = document.querySelector('.contact-titulo');
+            if (contactTitle) {
+                contactTitle.style.display = 'none';
+            }
         }
     }
     displayError() {
@@ -127,7 +131,7 @@ class FormSubmit {
     }
     init() {
         if (this.form && this.formButton) {
-            this.formButton.addEventListener("click", () => this.sendForm);
+            this.formButton.addEventListener("click", (event) => this.sendForm(event));
         }
         return this;
     }
@@ -135,7 +139,7 @@ class FormSubmit {
 const formSubmit = new FormSubmit({
     form: "[data-form]",
     button: "[data-button]",
-    success: "<h1 class='success'>Mensagem enviada!</h1>",
+    success: "<div class='form-submit'><h1 class='success'>Mensagem enviada com sucesso!</h1><h3 class='success2'>Em breve entrarei em contato.</h3></div>",
     error: "<h1 class='error'>Não foi possivel enviar sua mensagem!</h1>"
 });
 formSubmit.init();

@@ -6,14 +6,13 @@
     <title>Portfólio</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/style_about.css">
+    <link rel="stylesheet" href="./styles/style_contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header class="cabecalho">
-        <section class="cabecalho_menu">
+        <div class="cabecalho_menu">
             <h2 class="cabecalho_menu_nome">Therlyson <strong class="nome_destaque">Ryan</strong> </h2>
             <button id="btn-menu">
                 <i class="fa-solid fa-bars"></i>
@@ -22,18 +21,18 @@
                 <a class="cabecalho_menu_paginas_pagina" href="#home">Home</a>
                 <a class="cabecalho_menu_paginas_pagina" href="#about">About</a>
                 <a class="cabecalho_menu_paginas_pagina" href="projects.html">Projects</a>
-                <a class="cabecalho_menu_paginas_pagina" href="contact.html">Contact</a> 
+                <a class="cabecalho_menu_paginas_pagina" href="#contact">Contact</a> 
             </nav>
-        </section>
+        </div>
     </header>
 
     <section class="home" id="home">
         <div class="home-img">
             <img src="imagens/fotoCapa1.jpg" alt="Imagem Ryan" class="home-img-destaque">
         </div>
-        <section class="home-conteudo">
+        <div class="home-conteudo">
             <h1 class="home-conteudo-nome">Hello, I'm <strong class="home-nome-destaque">Therlyson</strong></h1>
-            <h3 class="home-conteudo-animation">I'm a <span></span></h3>
+            <h3 class="home-conteudo-animation">I'm a <span class="home-generator"></span></h3>
             <p class="home-conteudo-texto">Bem-vindo ao meu portfólio, 
                 onde cada página conta uma história única de inovação e dedicação. 
                 Explore minha jornada criativa e descubra 
@@ -46,14 +45,14 @@
             </div>
 
             <a href="mailto:therlyson2017@gmail.com" class="home-conteudo-contrato">Contrate-me</a>
-        </section>
+        </div>
     </section>
 
     <section class="about" id=about>
         <div class="about-img">
             <img src="imagens/fotoCapa1.jpg" alt="Imagem Ryan" class="about-img-destaque">
         </div>
-        <section class="about-conteudo">
+        <div class="about-conteudo">
             <h1 class="about-conteudo-nome">About <strong class="nome-destaque">ME</strong></h1>
             <h3 class="about-conteudo-animation"><span></span></h3>
             <p class="about-conteudo-sobre"> Sou estudante de Ciência da Computação na UFMA, atualmente estou cursando
@@ -67,8 +66,26 @@
             <div class="about-cv">
                 <a href="http://lattes.cnpq.br/7067341296340598" class="about-conteudo-cv" target="_blank">Download CV</a>
             </div>
-        </section>
+        </div>
     </section> 
+
+    <section class="contact" id="contact">
+        <h1 class="contact-titulo"> Fala <strong class="contact-destaque">Comigo</strong></h1>
+
+        <form action="https://formsubmit.co/ajax/therlyson2017@gmail.com" method="post" data-form>
+            <div class="contact-input-box">
+                <input type="text" name="nome" placeholder="nome completo" required>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="contact-input-box">
+                <input type="text" name= "numero" placeholder="Seu número" required>
+                <input type="text" name="assunto" placeholder="Assunto">
+            </div>
+
+            <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Sua mensagem" required></textarea>
+            <input type="submit" value="enviar mensagem" class="contact-btn" data-button>
+        </form>
+    </section>
 
 
     <footer></footer>

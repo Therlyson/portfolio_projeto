@@ -11,7 +11,8 @@
 }
 
 .about{
-    padding: 6rem;
+    padding: 5rem;
+    padding-top: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,8 +26,8 @@
 
 .about-img-destaque{
     border-radius: 50%;
-    width: 215rem; 
-    height: 25rem;
+    width: 25rem; 
+    height: auto;
     object-fit: cover;
     box-shadow: 0 0 15px var(--cor-quartenaria);
     cursor: pointer;

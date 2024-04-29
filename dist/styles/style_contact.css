@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
+
+:root {
+    --cor-primaria: #111111;
+    --cor-secundaria: #000000;
+    --cor-terciaria: #ffffff;
+    --cor-quartenaria: #d80000e7;
+
+    --font-secundaria: "Eczar", serif;
+}
+
+.contact{
+    padding: 3rem;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-titulo{
+    color: var(--cor-terciaria);
+    font-family: var(--font-secundaria);
+    font-weight: 700;
+    font-size: 2.8rem;
+}
+.contact-destaque{
+    font-family: var(--font-secundaria);
+    font-weight: 700;
+    color: var(--cor-quartenaria);
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+    color: #747474;
+    background-color: var(--cor-primaria);
+    border-radius: 0.8rem;
+    border: 3px solid var(--cor-quartenaria);
+    margin: 0.6rem 0;
+    resize: none;
+}
+
+.contact-btn{
+    padding: 0.5rem 1.5rem;
+    background: var(--cor-quartenaria);
+    border-radius: 4rem;
+    font-family: var(--font-secundaria);
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--cor-terciaria);
+    transition: 0.3s ease-in-out;
+    letter-spacing: 0.1rem;
+    margin: 1.2rem 0rem 0rem 0rem;
+    cursor: pointer;
+}
+.contact-btn:hover{
+    transform: scale(1)translateY(-3px);
+    box-shadow: 0 0 25px var(--cor-quartenaria);
+}
+.contact-btn:disabled{
+    cursor: not-allowed;
+    background-color: #747474;
+}

@@ -214,8 +214,11 @@ body {
     color: var(--cor-terciaria);
     margin-bottom: 1rem;
 }
-.home-generator{
+#home-generator{
     color: var(--cor-quartenaria);
+    font-family: var(--font-secundaria);
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .home-conteudo-texto{

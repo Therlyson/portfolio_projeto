@@ -1,5 +1,3 @@
-// import Typed from 'typed.js';
-
 import { error } from "console";
 
 class MobileNavbar{ //classe para ajeitar a navegação responsiva da página
@@ -116,6 +114,10 @@ class FormSubmit {
     displayError(): void{
         if (this.form) {
             this.form.innerHTML = this.settings.error;
+            const contactTitle = document.querySelector('.contact-titulo') as HTMLElement;
+            if (contactTitle) {
+                contactTitle.style.display = 'none';
+            }
         }
     }
 
@@ -176,11 +178,79 @@ destaqueHeader.ativar();
 destaqueHeader.mudar();
 
 
-//deixar animação
-// const typed = new Typed(".home-generator", {
-//     strings: ["FullStack Development", "Software Engineer", "Scientific Researcher"],
-//     typeSpeed: 70,
-//     backSpeed: 70,
-//     backDelay: 1000,
-//     loop: true
-// });
+//animação
+let textos: string[] = [
+    "computer science student",
+    'FullStack Development',
+    'scientific researcher',
+];
+
+// Índice do texto atual
+let indiceTextoAtual: number = 0;
+
+// Tempo de espera entre cada caractere (em milissegundos)
+let tempoEspera: number = 90; // Tempo de espera entre os caracteres
+
+// Elemento onde o texto será exibido
+let elementoNome: HTMLElement | null = document.getElementById('home-generator');
+
+// Função para exibir o texto com efeito de digitação
+function digitarTexto(): void {
+    let textoAtual: string = "";
+    let texto: string = textos[indiceTextoAtual];
+    let i: number = 0;
+    let intervalo = setInterval(function() {
+        textoAtual += texto[i];
+        if(elementoNome) {
+            elementoNome.textContent = textoAtual;
+            elementoNome.style.color = '#d80000e7'; 
+        }
+        i++;
+        if (i >= texto.length) {
+            clearInterval(intervalo);
+            setTimeout(reescreverTexto, 100); 
+        }
+    }, tempoEspera);
+}
+
+// Função para reescrever o texto
+function reescreverTexto(): void {
+    let texto: string = textos[indiceTextoAtual];
+    let i: number = texto.length - 1;
+    let intervalo = setInterval(function() {
+        let textoAtual: string = texto.substring(0, i + 1);
+        if(elementoNome) {
+            elementoNome.textContent = textoAtual;
+            elementoNome.style.color = '#d80000e7'; 
+        }
+        i--;
+        if (i < 0) {
+            clearInterval(intervalo);
+            indiceTextoAtual = (indiceTextoAtual + 1) % textos.length; 
+            digitarTexto(); 
+        }
+    }, tempoEspera / 2); 
+}
+
+// Inicia o efeito de digitação com o primeiro texto do array
+digitarTexto();
+
+function toggleOptions(id: string): void {
+    let buttons: HTMLCollectionOf<Element> = document.getElementsByClassName('selecao_botao');
+    for (let i = 0; i < buttons.length; i++) {
+        if (buttons[i].id === id) {
+            buttons[i].classList.add('selected'); 
+        } else {
+            buttons[i].classList.remove('selected'); 
+        }
+    }
+
+    let options: HTMLCollectionOf<Element> = document.getElementsByClassName('opcoes');
+    for (let i = 0; i < options.length; i++) {
+        if (options[i].id === id) {
+            (options[i] as HTMLElement).style.display = 'block';
+        } else {
+            (options[i] as HTMLElement).style.display = 'none';
+        }
+    }
+}

@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
+
+:root {
+    --cor-primaria: #111111;
+    --cor-secundaria: #000000;
+    --cor-terciaria: #ffffff;
+    --cor-quartenaria: #d80000e7;
+
+    --font-secundaria: "Eczar", serif;
+}
+
+.skills{
+    box-shadow: 0 8px 30px 0px #ffffff1d;
+    padding: 5rem;
+    padding-top: 4rem;
+}
+
+.skills-subtitle {
+    text-align: center;
+    font-size: 2.6rem;
+    font-family: var(--font-secundaria);
+    padding-bottom: 2rem;
+    color: var(--cor-terciaria);
+}
+.skills-subtitle span {
+    font-family: var(--font-secundaria);
+    color: var(--cor-quartenaria);
+}
+
+.skills-sec {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-sec-technical {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.text-technical {
+    font-size: 1.4rem;
+    font-family: var(--font-secundaria);
+    color: var(--cor-terciaria);
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
+
+.linguagens{
+    font-size: 1.8rem;
+    margin-top: 40px 0;
+    padding: 5px;
+}
+
+.linguagens:first-child {
+    margin-top: 0;
+}
+
+.linguagens:last-child {
+    margin-bottom: 0;
+}
+
+.linguagens .info {
+    margin-bottom: 5px;
+}
+
+.linguagens .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.linguagens .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.linguagens .progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.java span {
+    width: 90%;
+}
+
+.progress-line.spring span {
+    width: 70%;
+}
+
+.progress-line.python span {
+    width: 65%;
+}
+
+.progress-line.html span {
+    width: 60%;
+}
+
+.progress-line.css span {
+    width: 60%;
+}
+
+.progress-line.ts span {
+    width: 50%;
+}
+
+.progress-line.js span {
+    width: 35%;
+}
+
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+.progress-line.java span::after {
+    content: "90%";
+}
+
+.progress-line.spring span::after {
+    content: "70%";
+}
+
+.progress-line.python span::after {
+    content: "65%";
+}
+
+.progress-line.html span::after {
+    content: "60%";
+}
+
+.progress-line.css span::after {
+    content: "60%";
+}
+
+.progress-line.ts span::after {
+    content: "50%";
+}
+
+.progress-line.js span::after {
+    content: "35%";
+}
+
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+
+
+/* .Technical-bars .bar {
+    margin-top: 40px 0;
+    padding: 5px;
+} */
+
+/* 
+.skills-sec-professional {
+    width: 600px;
+    max-height: 500px;
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.radial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radial-bars .radial-bar {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radial-bars .radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radial-bars .radial-bar .progress-bar {
+    stroke-width: 10;
+    stop-color: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+.path {
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path.path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+
+.path.path-2 {
+    animation: animate-path2 1s 1s linear forwards;
+}
+
+.path.path-3 {
+    animation: animate-path3 1s 1s linear forwards;
+}
+
+.path.path-4 {
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+.radial-bar .percentage {
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bar .text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 15%;
+    bottom: 5px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+} */

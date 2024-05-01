@@ -1,2 +1,0 @@
-1 - Adicionar ao home minhas qualificações com typeScript, ANIMAÇÃO
-2 - corrigir o erro em que os models não aparecem no console do navegador

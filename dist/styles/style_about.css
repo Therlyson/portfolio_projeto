@@ -61,17 +61,13 @@
     display: inline-block; /* Garante que a borda envolva apenas o texto */
 }
 
-/* .home-conteudo-animation{
+#about-generator{
     font-family: var(--font-secundaria);
     font-size: 2rem;
     font-weight: 500;
-    color: var(--cor-terciaria);
-    margin-bottom: 1rem;
-}
-span{
     color: var(--cor-quartenaria);
-} */
-
+    margin-bottom: 0.8rem;
+}
 
 .about-conteudo-sobre{
     font-family: var(--font-secundaria);

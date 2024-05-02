@@ -27,16 +27,16 @@
 
 .about-img-destaque{
     border-radius: 50%;
-    width: 25rem; 
+    width: 27rem; 
     height: auto;
     object-fit: cover;
-    box-shadow: 0 0 15px var(--cor-quartenaria);
+    box-shadow: 0 0 15px var(--cor-terciaria);
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
 .about-img-destaque:hover{
-    box-shadow: 0 0 30px var(--cor-quartenaria),
-                0 0 60px var(--cor-quartenaria);
+    box-shadow: 0 0 30px var(--cor-terciaria),
+                0 0 60px var(--cor-terciaria);
 }
 
 .about-conteudo{

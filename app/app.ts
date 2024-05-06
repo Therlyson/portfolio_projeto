@@ -3,6 +3,7 @@ import { DestaqueHeader } from "./models/DestaqueHeader.js";
 import { FormSubmit } from "./models/FormSubmit.js";
 import { GeraTexto } from "./models/GeraTexto.js";
 
+
 const formSubmit = new FormSubmit({
     form: "[data-form]",
     button: "[data-button]",
@@ -11,12 +12,15 @@ const formSubmit = new FormSubmit({
 });
 formSubmit.init();
 
+
 const mobileNavBar = new MobileNavbar("#btn-menu", ".cabecalho_menu_paginas", ".cabecalho_menu_paginas a");
 mobileNavBar.init();
+
 
 const destaqueHeader = new DestaqueHeader(".cabecalho_menu_paginas", "section", ".cabecalho_menu_paginas a");
 destaqueHeader.ativar(); 
 destaqueHeader.mudar();
+
 
 const textoComEfeito = new GeraTexto(
     [

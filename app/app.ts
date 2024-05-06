@@ -2,11 +2,11 @@ import { MobileNavbar } from "./models/MobileNavbar.js";
 import { DestaqueHeader } from "./models/DestaqueHeader.js";
 import { FormSubmit } from "./models/FormSubmit.js";
 import { GeraTexto } from "./models/GeraTexto.js";
-
+import { AnimacaoProjects } from "./models/animacaoProjects.js";
 
 const formSubmit = new FormSubmit({
     form: "[data-form]",
-    button: "[data-button]",
+    button: "[data-button]", 
     success: "<div class='form-submit'><h1 class='success'>Mensagem enviada com sucesso!</h1><h3 class='success2'>Em breve entrarei em contato.</h3></div>",
     error: "<h1 class='error'>Não foi possivel enviar sua mensagem!</h1>"
 });
@@ -41,3 +41,6 @@ const textoComEfeito2 = new GeraTexto(
     90,
     'about-generator'
 );
+
+// Inicialização da classe
+const animacaoProjects = new AnimacaoProjects();

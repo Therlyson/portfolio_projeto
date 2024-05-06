@@ -2,6 +2,7 @@ import { MobileNavbar } from "./models/MobileNavbar.js";
 import { DestaqueHeader } from "./models/DestaqueHeader.js";
 import { FormSubmit } from "./models/FormSubmit.js";
 import { GeraTexto } from "./models/GeraTexto.js";
+import { AnimacaoProjects } from "./models/animacaoProjects.js";
 const formSubmit = new FormSubmit({
     form: "[data-form]",
     button: "[data-button]",
@@ -24,3 +25,5 @@ const textoComEfeito2 = new GeraTexto([
     'FullStack Development',
     'scientific researcher',
 ], 90, 'about-generator');
+// Inicialização da classe
+const animacaoProjects = new AnimacaoProjects();

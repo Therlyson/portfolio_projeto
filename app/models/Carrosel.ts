@@ -1,4 +1,4 @@
-export class AnimacaoProjects {
+export class Carrosel {
     private nextDom: HTMLElement;
     private prevDom: HTMLElement;
     private carouselDom: HTMLElement;
@@ -6,9 +6,7 @@ export class AnimacaoProjects {
     private thumbnailBorderDom: HTMLElement;
     private timeDom: HTMLElement;
     private timeRunning: number;
-    private timeAutoNext: number;
     private runTimeOut: number | NodeJS.Timeout;
-    private runNextAuto!: number | NodeJS.Timeout;
 
     constructor() {
         this.nextDom = document.getElementById('next')!;
@@ -18,7 +16,6 @@ export class AnimacaoProjects {
         this.thumbnailBorderDom = document.querySelector('.projects .thumbnail') as HTMLElement;
         this.timeDom = document.querySelector('.projects .time') as HTMLElement;
         this.timeRunning = 3000;
-        this.timeAutoNext = 7000;
 
         this.init();
     }
@@ -27,9 +24,6 @@ export class AnimacaoProjects {
         this.thumbnailBorderDom.appendChild(this.thumbnailBorderDom.querySelectorAll('.item')[0]);
         this.nextDom.onclick = () => this.showSlider('next');
         this.prevDom.onclick = () => this.showSlider('prev');
-        this.runNextAuto = setTimeout(() => {
-            this.nextDom.click();
-        }, this.timeAutoNext);
     }
 
     private showSlider(type: string): void {
@@ -50,10 +44,5 @@ export class AnimacaoProjects {
             this.carouselDom.classList.remove('next');
             this.carouselDom.classList.remove('prev');
         }, this.timeRunning);
-
-        clearTimeout(this.runNextAuto);
-        this.runNextAuto = setTimeout(() => {
-            this.nextDom.click();
-        }, this.timeAutoNext);
     }
 }

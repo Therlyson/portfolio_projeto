@@ -27,7 +27,8 @@
 
 .about-img-destaque{
     border-radius: 50%;
-    width: 27rem; 
+    max-width: 45rem;
+    width: 37rem; 
     height: auto;
     object-fit: cover;
     box-shadow: 0 0 15px var(--cor-terciaria);
@@ -99,6 +100,12 @@
     box-shadow: 0 0 25px var(--cor-quartenaria);
 }
 
+@media(max-width:1480px){
+    .about-img-destaque{
+        max-width: 27rem;
+    }
+}
+
 @media(max-width: 1067px){
     .about{
         padding: 3rem;
@@ -106,8 +113,7 @@
     }
 
     .about-img-destaque{
-        height: 21rem;
-        max-width: 20rem;
+        max-width: 23rem;
         margin-bottom: 1rem;
     }
 }
@@ -120,8 +126,7 @@
     }
 
     .about-img-destaque{
-        height: 20rem;
-        max-width: 19rem;
+        max-width: 22rem;
         margin-bottom: 1rem;
     }
 

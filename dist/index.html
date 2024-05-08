@@ -210,134 +210,112 @@
 
     <section class="projects" id="projects">
         <h1 class="projects-title">My <span>projects</span></h1>
-        <div class="list">
-            <div class="item">
-                <div class="img-wrapper">
-                    <img src="imagens/Imagens-projetos/img_jogoDragonBall.png" alt="">
+        <div class="slider">
+            <div class="projects_slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+
+            <article class="card__article first">
+                <div class="card__image">
+                    <img src="imagens/Imagens-projetos/img_jogoDragonBall.png" alt="image" class="card_image_img">
                 </div>
-                <div class="content">
-                    <div class="title">DRAGON BALL O JOGO</div>
-                    <div class="des">
+    
+                <div class="card__data">
+                    <h3 class="card__name">Dragon ball o jogo</h3>
+                    <p class="card__description">
                         Jogo feito utilizando a linguagem python, e a biblioteca Pygame.
                         trata-se de um projeto acadêmico feito para uma avaliação de Algoritmos 1 da minha faculdade.
                         O intuito do jogo é derrotar a quantidade de freezas possiveis, mas com o passar do tempo a dificuldade vai 
                         aumentando ficando mais dificil matar os freezas.
-                    </div>
-                    <div class="buttons">
-                        <a href="https://github.com/Therlyson/dragon-ball-O-jogo" target="_blank">SEE PROJECT</a>      
-                    </div>
+                    </p>
+                    <a href="https://github.com/Therlyson/dragon-ball-O-jogo" class="card__button">See project</a>
                 </div>
-            </div>
-            <div class="item">
-                <div class="img-wrapper">
-                    <img src="imagens/Imagens-projetos/img_jogoNav.png" alt="">
+            </article>
+
+            <article class="card__article ">
+                <div class="card__image">
+                    <img src="imagens/Imagens-projetos/img_miniProjeto.png" alt="image" class="card_image_img">                        
                 </div>
-                <div class="content">
-                    <div class="title">JOGO DA NAVE ESPACIAL</div>
-                    <div class="des">
+    
+                <div class="card__data">
+                    <h3 class="card__name">Projeto de alocação de salas e espaços</h3>
+                    <p class="card__description">
+                        Projeto final da disciplina de linguagem de programação 2.
+                        Programa utilizando linguagem java e conceitos de orientação a objetos, coleções, exceções e arquivos. 
+                        Também foi utilizado java swing para criar a interface gráfica.
+                        Esse programa tem o intuito de auxiliar um departamento no problema de alocar salas e espaços compartilhados referente a uma universidade.
+                    </p>
+                    <a href="https://github.com/Therlyson/miniProject2" class="card__button">See project</a>
+                </div>
+            </article>
+
+            <article class="card__article ">
+                <div class="card__image">
+                    <img src="imagens/Imagens-projetos/img_jogoNav.png" alt="image" class="card_image_img">
+                </div>
+    
+                <div class="card__data">
+                    <h3 class="card__name">Jogo da nave espacial</h3>
+                    <p class="card__description">
                         Jogo feito utilizando a linguagem python, e a biblioteca Pygame. O jogo é para iniciantes, fiz ele quando estava começando na 
                         área da Computação. O objetivo do jogo é basicamente derrotar os aliens no espaço e não permitir que o alien chegue até você, 
                         a cada morte do alien a dificuldade aumenta ficando cada vez mais dificil vencê-los.
-                    </div>
-                    <div class="buttons">
-                        <a href="https://github.com/Therlyson/JogoDaNave-para-iniciantes" target="_blank">SEE PROJECT</a>      
-                    </div>
+                    </p>
+                    <a href="https://github.com/Therlyson/JogoDaNave-para-iniciantes" class="card__button">See project</a>
                 </div>
-            </div>
-            <div class="item">
-                <div class="img-wrapper">
-                    <img src="imagens/Imagens-projetos/img_classificacao.png" alt="">
+            </article>
+
+            <article class="card__article ">
+                <div class="card__image">
+                    <img src="imagens/Imagens-projetos/img_classificacao.png" alt="image" class="card_image_img">
                 </div>
-                <div class="content">
-                    <div class="title">CLASSIFICAÇÃO DE IMAGENS DE SATÉLITE</div>
-                    <div class="des">
+    
+                <div class="card__data">
+                    <h3 class="card__name">Classificação de imagens de satélite</h3>
+                    <p class="card__description">
                         Projeto acadêmico científico para classificar imagens de satélite. Feito utilizando a linguagem python 
                         para treinar a rede neural com o intuito de classificar um conjunto de dados de classificação de imagem de satélite-RSI-CB256, 
                         este conjunto de dados tem 4 classes diferentes misturadas 
                         de sensores e instantâneo do mapa do Google. Utilizei para esse projetos bibliotecas como keras e numpy.  
-                    </div>
-                    <div class="buttons">
-                        <a href="https://github.com/Therlyson/Classification-of-satellite-images" target="_blank">SEE PROJECT</a>      
-                    </div>
+                    </p>
+                    <a href="https://github.com/Therlyson/Classification-of-satellite-images" class="card__button">See project</a>
                 </div>
-            </div>
-            <div class="item">
-                <div class="img-wrapper">
-                    <img src="imagens/Imagens-projetos/img_miniProjeto.png" alt="">
+            </article>
+
+            <article class="card__article ">
+                <div class="card__image">
+                    <img src="imagens/Imagens-projetos/img-segmentação.png" alt="image" class="card_image_img">
                 </div>
-                <div class="content">
-                    <div class="title">PROJETO DE ALOCAÇÃO DE SALAS E ESPAÇOS</div>
-                    <div class="des">
-                        Projeto final da disciplina de linguagem de programação 2.
-                        Programa utilizando linguagem java e conceitos de orientação a objetos, coleções, exceções e arquivos. 
-                        Também foi utilizado java swing para criar a interface gráfica.
-                        Esse programa tem o intuito de auxiliar um departamento no problema de alocar salas e espaços compartilhados referente a uma universidade.</div>
-                    <div class="buttons">
-                        <a href="https://github.com/Therlyson/miniProject2" target="_blank">SEE PROJECT</a>      
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="img-wrapper">
-                    <img src="imagens/Imagens-projetos/img-segmentação.png" alt="">
-                </div>
-                <div class="content">
-                    <div class="title">SEGMENTAÇÃO DE TUMORES CEREBRAIS</div>
-                    <div class="des">
+    
+                <div class="card__data">
+                    <h3 class="card__name">Segmentação de tumores cerebrais</h3>
+                    <p class="card__description">
                         Projeto acadêmico científico para segmentar tumores cerebrais em imagens de Ressonância Magnética.
-                        Utilizando a linguagem python e a rede neural convolucional U-NET</div>
-                    <div class="buttons">
-                        <a href="https://github.com/Therlyson/segmentation-of-brain-tumors" target="_blank">SEE PROJECT</a>      
-                    </div>
+                        Utilizando a linguagem python e a rede neural convolucional U-NET
+                    </p>
+                    <a href="https://github.com/Therlyson/segmentation-of-brain-tumors" class="card__button">See project</a>
                 </div>
+            </article>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
             </div>
         </div>
 
-        <div class="thumbnail">
-            <div class="item">
-                <img src="imagens/Imagens-projetos/img_jogoDragonBall.png">
-                <div class="content">
-                    <div class="title">
-                        DRAGON BALL O JOGO
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="imagens/Imagens-projetos/img_jogoNav.png">
-                <div class="content">
-                    <div class="title">
-                        JOGO DA NAV ESPACIAL
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="imagens/Imagens-projetos/img_classificacao.png">
-                <div class="content">
-                    <div class="title">
-                        CLASSIFICAÇÃO DE SATELITE
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="imagens/Imagens-projetos/img_miniProjeto.png" alt="">
-                <div class="content">
-                    <div class="title">PROJETO DE ALOCAÇÃO DE SALAS E ESPAÇOS</div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="imagens/Imagens-projetos/img-segmentação.png" alt="">
-                <div class="content">
-                    <div class="title">SEGMENTAÇÃO DE TUMORES CEREBRAIS</div>
-                </div>
-            </div>
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
         </div>
-         
-         <div class="arrows">
-            <button id="prev"><</button>
-            <button id="next">></button>
-        </div>
-        
-        <div class="time"></div>
     </section>
 
     <section class="contact" id="contact">

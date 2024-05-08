@@ -26,7 +26,16 @@ body {
     width: 100%;
     box-sizing: border-box;
     background-color: var(--cor-primaria);
+    transition: background 0.8s, color 0.8s;
 }
+
+.light-theme{
+    --cor-primaria: #f7f7f7;
+    --cor-secundaria: #919090;
+    --cor-terciaria: #000000;
+    --cor-quartenaria: #d80000e7;
+}
+
 
 .cabecalho {
     position: fixed;
@@ -63,6 +72,7 @@ body {
 
 .cabecalho_menu_paginas {
     display: flex;
+    align-items: center;
     gap: 40px;
 }
 .cabecalho_menu_paginas_pagina {
@@ -83,7 +93,7 @@ body {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 930px) {
     body{
         overflow-x: hidden; /*se algo sai do boddy fica fora do scroll vertical*/
     }
@@ -136,6 +146,38 @@ body {
         transform: translateX(0);
     }
 }
+
+.toggle-btn{
+    background: var(--cor-quartenaria);
+    color: var(--cor-terciaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9.375rem;
+    height: 2.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.toggle-btn img{
+    width: 1.875rem;
+    margin-left: 10px;
+}
+.toggle-btn span{
+    font-family: var(--font-secundaria);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1100px){
+    .toggle-btn{
+        width: 3.375rem;
+        height: 2.5rem;
+    }
+
+    .toggle-btn span{
+        display: none;
+    }
+}
+
 
 
 /* PÁGINA PRINCIPAL DO PORTFÓLIO */

@@ -24,3 +24,18 @@ const textoComEfeito2 = new GeraTexto([
     'FullStack Development',
     'scientific researcher',
 ], 90, 'about-generator');
+// tema dark
+let btn = document.getElementById("btn");
+let btnText = document.getElementById("btnText");
+let btnIcon = document.getElementById("btnIcon");
+btn.onclick = function () {
+    let isLightTheme = document.body.classList.toggle("light-theme");
+    if (isLightTheme) {
+        btnIcon.src = "imagens/moon.png";
+        btnText.textContent = "Dark";
+    }
+    else {
+        btnIcon.src = "imagens/sun.png";
+        btnText.textContent = "Light";
+    }
+};

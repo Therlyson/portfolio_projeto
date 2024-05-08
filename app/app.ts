@@ -41,3 +41,21 @@ const textoComEfeito2 = new GeraTexto(
     90,
     'about-generator'
 );
+
+
+// tema dark
+let btn = document.getElementById("btn") as HTMLElement;
+let btnText = document.getElementById("btnText") as HTMLSpanElement;
+let btnIcon = document.getElementById("btnIcon") as HTMLImageElement;
+
+btn.onclick = function(){
+    let isLightTheme = document.body.classList.toggle("light-theme");
+
+    if(isLightTheme){
+        btnIcon.src = "imagens/moon.png";
+        btnText.textContent = "Dark";
+    }else{
+        btnIcon.src = "imagens/sun.png";
+        btnText.textContent = "Light";
+    }
+}

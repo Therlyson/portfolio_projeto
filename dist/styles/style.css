@@ -203,7 +203,7 @@ body {
     top: 4rem;
     width: 17rem;
     height: 18rem;
-    box-shadow: 0 0 30px var(--cor-quartenaria);
+    box-shadow: 0 0 30px var(--cor-terciaria);
     cursor: pointer;
     transition: 0.5s ease-in-out;
     object-fit: cover; /* Garante que a imagem mantenha sua proporção */
@@ -223,8 +223,8 @@ body {
 }
 
 .home-img-destaque:hover{
-    box-shadow: 0 0 40px var(--cor-quartenaria),
-                0 0 80px var(--cor-quartenaria);
+    box-shadow: 0 0 40px var(--cor-terciaria),
+                0 0 80px var(--cor-terciaria);
 }
 
 .home-conteudo{

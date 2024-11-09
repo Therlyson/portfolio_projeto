@@ -89,40 +89,44 @@ body {
     transform-origin: left;
 }
 
-.progress-line.html span {
-    width: 60%;
-}
-
-.progress-line.css span {
-    width: 55%;
-}
-
 .progress-line.python span {
-    width: 45%;
-}
-
-.progress-line.java span {
-    width: 85%;
-}
-
-.progress-line.cpls span {
-    width: 45%;
-}
-
-.progress-line.spring span {
-    width: 75%;
-}
-
-.progress-line.ts span {
     width: 35%;
 }
 
+.progress-line.java span {
+    width: 90%;
+}
+
+.progress-line.spring span {
+    width: 80%;
+}
+
+.progress-line.ts span {
+    width: 55%;
+}
+
+.progress-line.nodejs span {
+    width: 50%;
+}
+
 .progress-line.js span {
-    width: 30%;
+    width: 40%;
 }
 
 .progress-line.postgre span {
-    width: 60%;
+    width: 68%;
+}
+
+.progress-line.reactnative span {
+    width: 25%;
+}
+
+.progress-line.docker span {
+    width: 15%;
+}
+
+.progress-line.git span {
+    width: 75%;
 }
 
 .progress-line span::after {
@@ -138,42 +142,6 @@ body {
     opacity: 0;
 }
 
-.progress-line.html span::after {
-    content: "60%";
-}
-
-.progress-line.css span::after {
-    content: "55%";
-}
-
-.progress-line.python span::after {
-    content: "45%";
-}
-
-.progress-line.java span::after {
-    content: "85%";
-}
-
-.progress-line.cpls span::after {
-    content: "45%";
-}
-
-.progress-line.spring span::after {
-    content: "75%";
-}
-
-.progress-line.ts span::after {
-    content: "35%";
-}
-
-.progress-line.js span::after {
-    content: "30%";
-}
-
-.progress-line.postgre span::after {
-    content: "60%";
-}
-
 .progress-line span::before {
     content: "";
     position: absolute;
@@ -182,7 +150,6 @@ body {
     border: 7px solid transparent;
     border-bottom-width: 0px;
     border-right-width: 0px;
-    border-top-color: #ff0000;
     top: -10px;
     right: 0;
     animation: showText 0.5s 1.5s linear forwards;
@@ -252,19 +219,14 @@ body {
     animation: animate-path4 1s 1s linear forwards;
 }
 
-.radial-bar .percentage {
-    font-size: 1.1rem;
-    font-weight: 500;
-    font-family: var(--font-secundaria);
-    color: var(--cor-terciaria);
-    position: absolute;
-    align-items: center;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
+.path.path-5 {
+    animation: animate-path5 1s 1s linear forwards;
 }
+
+.path.path-6 {
+    animation: animate-path6 1s 1s linear forwards;
+}
+
 
 .radial-bar .text {
     color: var(--cor-terciaria);
@@ -290,7 +252,7 @@ body {
 
 @keyframes animate-path2 {
     100% {
-        stroke-dashoffset: 290;
+        stroke-dashoffset: 160;
     }
 }
 
@@ -302,7 +264,19 @@ body {
 
 @keyframes animate-path4 {
     100% {
-        stroke-dashoffset: 50;
+        stroke-dashoffset: 70;
+    }
+}
+
+@keyframes animate-path5 {
+    100% {
+        stroke-dashoffset: 40;
+    }
+}
+
+@keyframes animate-path6 {
+    100% {
+        stroke-dashoffset: 130;
     }
 }
 

@@ -52,7 +52,7 @@ img {
 }
 
 .projects_slides{
-    width: 500%;
+    width: 700%;
     height: 55rem;
     display: flex;
 }
@@ -70,6 +70,7 @@ img {
 
 .card__image {
     position: relative;
+    width: 100%;
     padding-top: 1.5rem;
     margin-bottom: -.75rem;
     background-size: cover;
@@ -125,10 +126,11 @@ img {
     box-shadow: 0 0 25px var(--cor-quartenaria);
 }
 
-.manual-navigation{
+.manual-navigation {
     position: relative;
     width: 45.625rem;
-    margin-top: -70px;
+    margin-top: -5rem; 
+    margin-bottom: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,7 +138,7 @@ img {
 
 .manual-btn{
     border: 2px solid #ff0000;
-    padding: 7px;
+    padding: 8px;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
@@ -150,39 +152,26 @@ img {
     background-color: #ff0000;
 }
 
-#radio1:checked ~ .first{
+#radio1:checked ~ .first {
     margin-left: 0;
 }
-#radio2:checked ~ .first{
-    margin-left: -20%;
+#radio2:checked ~ .first {
+    margin-left: -14.28%;
 }
-#radio3:checked ~ .first{
-    margin-left: -40%;
+#radio3:checked ~ .first {
+    margin-left: -28.57%;
 }
-#radio4:checked ~ .first{
-    margin-left: -60%;
-}#radio5:checked ~ .first{
-    margin-left: -80%;
+#radio4:checked ~ .first {
+    margin-left: -42.85%;
 }
-
-.navigation-auto div{
-    border: 2px solid var(--cor-quartenaria);
-    padding: 7px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
+#radio5:checked ~ .first {
+    margin-left: -57.14%;
 }
-
-.navigation-auto{
-    position: absolute;
-    width: 45.625rem;
-    margin-top: 50.625rem;
-    display: flex;
-    justify-content: center;
+#radio6:checked ~ .first {
+    margin-left: -71.42%;
 }
-
-.navigation-auto div:not(:last-child){
-    margin-right: 30px;
+#radio7:checked ~ .first {
+    margin-left: -85.74%;
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1{
@@ -198,6 +187,9 @@ img {
     background-color: var(--cor-quartenaria);
 }
 #radio5:checked ~ .navigation-auto .auto-btn5{
+    background-color: var(--cor-quartenaria);
+}
+#radio6:checked ~ .navigation-auto .auto-btn6{
     background-color: var(--cor-quartenaria);
 }
 
@@ -216,6 +208,7 @@ img {
     }
 
     .manual-navigation{
+        margin-top: -10rem; /* 100px to rem */
         width: 27rem;
     }
 
@@ -253,8 +246,7 @@ img {
         padding: 0px;
     }
 
-    .manual-navigation,
-    .navigation-auto{
+    .manual-navigation{
         display: none;
         width: 100%;
     } 
@@ -278,5 +270,4 @@ img {
     ::-webkit-scrollbar-thumb:hover {
         background: #555; /* Cor do controle deslizante ao passar o mouse */
     }
-
 }

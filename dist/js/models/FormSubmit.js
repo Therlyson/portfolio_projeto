@@ -12,31 +12,18 @@ export class FormSubmit {
         this.settings = settings;
         this.form = document.querySelector(this.settings.form);
         this.formButton = document.querySelector(this.settings.button);
+        // Adiciona contêiner de mensagens
         if (this.form) {
             this.url = this.form.getAttribute("action");
+            this.messageContainer = document.createElement("div");
+            this.messageContainer.className = "form-message";
+            this.form.appendChild(this.messageContainer);
         }
         else {
             this.url = null;
+            this.messageContainer = null;
         }
         this.sendForm = this.sendForm.bind(this);
-    }
-    displaySuccess() {
-        if (this.form) {
-            this.form.innerHTML = this.settings.success;
-            const contactTitle = document.querySelector('.contact-titulo');
-            if (contactTitle) {
-                contactTitle.style.display = 'none';
-            }
-        }
-    }
-    displayError() {
-        if (this.form) {
-            this.form.innerHTML = this.settings.error;
-            const contactTitle = document.querySelector('.contact-titulo');
-            if (contactTitle) {
-                contactTitle.style.display = 'none';
-            }
-        }
     }
     getFormObject() {
         const formObject = {};
@@ -46,16 +33,34 @@ export class FormSubmit {
         });
         return formObject;
     }
-    onSubmission(event) {
-        event.preventDefault();
-        const target = event.target;
-        target.disabled = true;
-        target.innerText = "Enviando...";
+    displayMessage(message) {
+        if (this.messageContainer) {
+            this.messageContainer.innerHTML = message;
+        }
+    }
+    displaySuccess() {
+        this.displayMessage(this.settings.success);
+    }
+    displayError() {
+        this.displayMessage(this.settings.error);
+    }
+    clearFormFields() {
+        if (this.form) {
+            const inputs = this.form.querySelectorAll("[name]");
+            inputs.forEach(input => {
+                if (input instanceof HTMLInputElement || input instanceof HTMLTextAreaElement) {
+                    input.value = ''; // Limpa o valor do campo
+                }
+            });
+        }
     }
     sendForm(event) {
         return __awaiter(this, void 0, void 0, function* () {
+            event.preventDefault();
+            const target = event.target;
+            target.disabled = true;
+            target.innerText = "Enviando...";
             try {
-                this.onSubmission(event);
                 yield fetch(this.url, {
                     method: "POST",
                     headers: {
@@ -65,9 +70,14 @@ export class FormSubmit {
                     body: JSON.stringify(this.getFormObject()),
                 });
                 this.displaySuccess();
+                this.clearFormFields();
             }
             catch (_a) {
                 this.displayError();
+            }
+            finally {
+                target.disabled = false;
+                target.innerText = "Enviar Mensagem";
             }
         });
     }
